@@ -25,7 +25,6 @@ namespace ApiTienda_GruopMeet.Controllers
 
         }
 
-
         //Generamos el metódo para mostrar los datos
         [HttpGet]
         public async Task<IActionResult> GetUsers()

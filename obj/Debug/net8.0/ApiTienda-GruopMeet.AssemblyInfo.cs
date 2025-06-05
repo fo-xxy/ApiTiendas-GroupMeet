@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiTienda-GruopMeet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfffd44e045b49229f413765e56b0b2a5741c540")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ca2451a0931a94b6fe327c904dd52f15956b7dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiTienda-GruopMeet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiTienda-GruopMeet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

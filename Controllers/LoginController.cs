@@ -19,7 +19,7 @@ namespace ApiTienda_GruopMeet.Controllers
             _authService = authService;
         }
 
-        //Método para el logueo (generar el token)
+        //Generamos el metódo para mostrar los datos
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {

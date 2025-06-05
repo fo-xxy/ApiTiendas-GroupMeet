@@ -9,7 +9,7 @@ using Services.Interfaces;
 
 namespace ApiTienda_GruopMeet.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/user/")]
     [ApiController]
     public class UserController : ControllerBase
     {

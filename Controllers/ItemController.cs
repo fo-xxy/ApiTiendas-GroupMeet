@@ -29,17 +29,16 @@ namespace ApiTienda_GruopMeet.Controllers
             return Ok(items);
         }
 
-        //Generamos el método para guardar un nuevo registro de item
+        //Generamos el método para guardar un nuevo registro del item
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] ItemCreateDto dto)
+        public async Task<IActionResult> CreateItem([FromBody] ItemCreateDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var createdUser = await _itemService.CreateItemAsync(dto);
-            return CreatedAtAction(nameof(GetAllItems), new { id = createdUser.id }, createdUser);
+            var createItem = await _itemService.CreateItemAsync(dto);
+            return CreatedAtAction(nameof(GetAllItems), new { id = createItem.id }, createItem);
         }
-
 
         //Generamos el método para actializar un item
         [HttpPut("{id}")]
@@ -67,7 +66,6 @@ namespace ApiTienda_GruopMeet.Controllers
                 return NotFound(new { message = $"No se encontró el item con id: {id}" });
 
             return Ok(new { message = "El item se eliminó correctamente." });
-
         }
     }
 }

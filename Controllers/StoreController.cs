@@ -61,6 +61,5 @@ namespace ApiTienda_GruopMeet.Controllers
 
             return Ok(new { message = "La tienda se eliminó correctamente." });
         }
-
     }
 }

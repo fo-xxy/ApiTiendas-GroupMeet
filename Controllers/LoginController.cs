@@ -21,6 +21,7 @@ namespace ApiTienda_GruopMeet.Controllers
 
         //Generamos el metódo para mostrar los datos
         [HttpPost]
+        [Route("auth")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
             var token = await _authService.AuthenticateAsync(dto);

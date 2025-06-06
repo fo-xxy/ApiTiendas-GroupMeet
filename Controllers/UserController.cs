@@ -18,11 +18,9 @@ namespace ApiTienda_GruopMeet.Controllers
 
 
         //Generamos el constructor del controlador y le pasamos como parametro el objeto de la interfaz
-
         public UserController(IUserService userService)
         {
             _userService = userService;
-
         }
 
         //Generamos el metódo para mostrar los datos
@@ -35,14 +33,15 @@ namespace ApiTienda_GruopMeet.Controllers
 
         //Generamos el método para guardar un nuevo registro de usuario
         [HttpPost]
-         public async Task<IActionResult> CreateUser([FromBody] UserCreateDto dto)
+        [Route("register")]
+        public async Task<IActionResult> CreateUser([FromBody] UserCreateDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var createdUser = await _userService.CreateUserAsync(dto);
-            return CreatedAtAction(nameof(GetUsers), new { id = createdUser.Id }, createdUser);
+            //return CreatedAtAction(nameof(GetUsers), new { id = createdUser.Id }, createdUser);
+            return Ok(new { message = "User created succesfully." });
         }
-
     }
 }
